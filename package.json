@@ -1,0 +1,15 @@
+{
+  "name": "morfix-lite",
+  "version": "0.0.1",
+  "description": "Lightweight Morfix.",
+  "main": "node server.js",
+  "author": "outofink",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cheerio": "latest",
+    "express": "latest",
+    "path": "^0.12.7",
+    "pug": "^2.0.0-rc.4",
+    "request": "latest"
+  }
+}
