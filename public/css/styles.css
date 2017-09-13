@@ -80,3 +80,7 @@ body {
 .grid {
   padding: 0px;
 }
+
+.mdl-textfield {
+  flex-shrink: 1;
+}
