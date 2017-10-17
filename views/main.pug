@@ -1,16 +1,16 @@
 doctype html
 html
-  head
-    title Morfix Lite - #{title}
-    meta(name="mobile-web-app-capable" content="yes")
-    meta(name="viewport", content="width=device-width, initial-scale=1.0, minimum-scale=1.0")
-    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-    link(href='https://code.getmdl.io/1.3.0/material.indigo-pink.min.css', rel='stylesheet')
-    link(href='/css/styles.css', rel='stylesheet')
+    head
+        title Morfix Lite - #{title}
+        meta(name="mobile-web-app-capable" content="yes")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, minimum-scale=1.0")
+        link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
+        link(href='https://code.getmdl.io/1.3.0/material.indigo-pink.min.css', rel='stylesheet')
+        link(href='/css/styles.css', rel='stylesheet')
 
-    script(async, defer, src="https://code.getmdl.io/1.3.0/material.min.js")
+        script(async, defer, src="https://code.getmdl.io/1.3.0/material.min.js")
 
-  body
+    body
     div(class="mdl-layout mdl-js-layout mdl-layout--fixed-header")
         header(class="mdl-layout__header")
             div(class="mdl-layout__header-row")
@@ -23,7 +23,6 @@ html
                         form(method='POST', autocomplete="off", autocorrect="off", autocapitalize="off", spellcheck="false", onsubmit='loading()')
                             input(class="mdl-textfield__input text", type="text", id="search", name="search", style="direction:RTL")
 
-
         main(class="mdl-layout__content background")
             div(class="page-content")
                 h3(id="title", style="text-align:center") #{title}
@@ -31,7 +30,7 @@ html
                     - for (key in JSON.stringify(data)) {
                         - if (data.hasOwnProperty(key)) {
                             div(class="card mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp")
-                                div(class="mdl-card__title  mdl-card--border", dir="auto")
+                                div(class="mdl-card__title    mdl-card--border", dir="auto")
                                     p(class="mdl-card__title-text") #{data[key].word}
                                     p(class="mdl-card__title-text diber") #{data[key].diber}
                                 div(class="mdl-card__supporting-text box", dir="auto") 
@@ -42,16 +41,16 @@ html
                     - }
                     - if (data.length == 0) {
                         div(class="card mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp")
-                            div(class="mdl-card__title  mdl-card--border no-results", dir="auto")
+                            div(class="mdl-card__title    mdl-card--border no-results", dir="auto")
                                 p(class="mdl-card__title-text results") No results found
                     - }
-                    div(id="spinner", class="mdl-spinner mdl-spinner--single-color mdl-js-spinner")
                     div(id="spinner", style="display:none", class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active")
+
 script.
     function loading() {
-        var cards = document.getElementsByClassName("card");
+        var cards = document.getElementsByClassName("card")
         for(var i = 0; i < cards.length; i++){
-            cards[i].style.display = "none";
+            cards[i].style.display = "none"
         }
 
         var title = document.getElementById("title")
@@ -64,4 +63,5 @@ script.
         searchbar.className = "mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label is-upgraded"
 
         var loadingicon = document.getElementById("spinner")
-    }        loadingicon.style = ""
+        loadingicon.style = ""
+    }
