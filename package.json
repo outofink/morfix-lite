@@ -5,11 +5,10 @@
   "main": "node server.js",
   "author": "outofink",
   "dependencies": {
-    "body-parser": "^1.17.2",
-    "cheerio": "latest",
-    "express": "latest",
-    "path": "^0.12.7",
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.2",
     "pug": "^2.0.0-rc.4",
-    "request": "latest"
+    "request": "^2.83.0"
   }
 }
