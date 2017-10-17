@@ -46,6 +46,7 @@ html
                                 p(class="mdl-card__title-text results") No results found
                     - }
                     div(id="spinner", class="mdl-spinner mdl-spinner--single-color mdl-js-spinner")
+                    div(id="spinner", style="display:none", class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active")
 script.
     function loading() {
         var cards = document.getElementsByClassName("card");
@@ -63,5 +64,4 @@ script.
         searchbar.className = "mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label is-upgraded"
 
         var loadingicon = document.getElementById("spinner")
-        loadingicon.className += " is-active"
-    }
+    }        loadingicon.style = ""
