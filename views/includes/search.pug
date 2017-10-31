@@ -1,0 +1,6 @@
+div(id="searchbar", class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label")
+    label(class="mdl-button mdl-js-button mdl-button--icon", for="search")
+        i(class="material-icons") search 
+    div(class="mdl-textfield__expandable-holder")
+        form(method='POST', autocomplete="off", autocorrect="off", autocapitalize="off", spellcheck="false", onsubmit='loading()')
+            input(class="mdl-textfield__input text", type="text", id="search", name="search", style="direction:RTL")
