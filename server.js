@@ -1,7 +1,6 @@
 var express = require('express');
 var path = require('path');
 var request = require('request');
-var cheerio = require('cheerio');
 var bodyParser = require('body-parser');
 
 var app = express()
@@ -22,48 +21,48 @@ app.get('/', function(req, res) {
 });
 
 app.post('/', function(req, res) {
-    url = 'http://www.morfix.co.il/' + encodeURI(req.body.search);
 
-    request(url, function(error, response, html) {
-        if (!error) {
-            var $ = cheerio.load(html);
-            var json = [];
-            var word = [];
-            var diber = [];
-            var translation = [];
+    word = req.body.search
+    bodyjson = `{"Query":"${word}","ClientName":"Android_Hebrew"}`
 
-            $('.word').each(function(i, elem) {
-                var data = $(this);
-                word[i] = data.text();
-            })
-            $('.diber').each(function(i, elem) {
-                var data = $(this);
-                var j = i.toString()
-                diber[i] = data.text();
-            })
-            $('.translation').each(function(i, elem) {
-                var data = $(this);
-                var j = i.toString()
-                translation[i] = data.children().first().text();
-                if (translation[i].trim() == "") {
-                	translation[i] = data.text().trim();
-                }
-                translation[i] = translation[i].split("; ");
-            })
-            translation = translation.filter(String)
-            for (i = 0; i < word.length; i++) {
+    lengthInUtf8Bytes = (str) => {
+        var m = encodeURIComponent(str).match(/%[89ABab]/g);
+        return str.length + (m ? m.length : 0);
+    }
+      
+    contentLength = lengthInUtf8Bytes(bodyjson)
+
+    request({
+            method: 'POST',
+            uri: "http://services.morfix.com/translationhebrew/TranslationService/GetTranslation/",
+            headers: {
+                "Accept": "application/json",
+                "Content-type": "application/json",
+                "Content-Length": contentLength,
+                "Host": "services.morfix.com",
+                "Connection": "Keep-Alive"
+            },
+            body: bodyjson
+        },
+        (error, response, body) => {
+            output = JSON.parse(body)
+            json = []
+            for (i = 0; i < output.Words.length; i++) {
+                translation = []
+                output.Words[i].OutputLanguageMeanings.forEach(function(definitions) {
+                    translation.push(definitions[0].DisplayText)
+                })
                 json[i] = {
-                    "word": word[i],
-                    "diber": diber[i],
-                    "translation": translation[i]
+                    "word": output.Words[i].InputLanguageMeanings[0][0].DisplayText,
+                    "diber": output.Words[i].PartOfSpeech,
+                    "translation": translation
                 }
-            }
-        }
-        res.render('main', {
-        	title: req.body.search,
-            data: json
+            };
+            res.render('main', {
+                title: req.body.search,
+                data: json
+            });
         });
     });
-});
 
 app.listen(process.env.PORT || 3000);
