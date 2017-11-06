@@ -18,9 +18,16 @@
   margin-top: 5px;
 }
 
-.text {
+.text-heb {
   text-align: right;
   cursor: left;
+  direction:rtl;
+}
+
+.text-eng {
+  text-align:left;
+  cursor: right;
+  direction:ltr;
 }
 
 .diber {
