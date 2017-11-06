@@ -6,7 +6,7 @@ html
         div(class="mdl-layout mdl-js-layout mdl-layout--fixed-header")
             include includes/bar.pug
 
-            main(class="mdl-layout__content background")
+            main(class="mdl-layout__content background" id="main")
                 div(class="page-content")
                     div(class="mdl-grid content-grid")
                         h3(id="title", class="center") #{title}
@@ -32,3 +32,4 @@ html
 script
     include js/loading.js
     include js/detectlang.js
+    include js/taptosearch.js
