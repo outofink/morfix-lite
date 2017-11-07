@@ -11,5 +11,5 @@ query.addEventListener('input', function (e) {
 
 containsEnglish = function (text) {
     if (!text) return false
-    return text.match(/^[a-zA-Z0-9]*$/)
+    return text.match(/^[a-zA-Z(?:^| )[0-9]+(?:\.[0-9]+)?(?: |$)$]*$/)
 }
