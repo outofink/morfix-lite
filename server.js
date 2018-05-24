@@ -23,7 +23,8 @@ app.get('/', function(req, res) {
 app.post('/', function(req, res) {
 
     word = req.body.search
-    bodyjson = `{"Query":"${word}","ClientName":"Android_Hebrew"}`
+    sanitizedWord = word.replace(/[`~!@#$%^&*()_|+\=?;:'",.<>\{\}\[\]\\\/]/gi, '');
+    bodyjson = `{"Query":"${sanitizedWord}","ClientName":"Android_Hebrew"}`
 
     lengthInUtf8Bytes = (str) => {
         var m = encodeURIComponent(str).match(/%[89ABab]/g);
