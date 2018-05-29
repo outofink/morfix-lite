@@ -50,8 +50,13 @@ app.post('/', function(req, res) {
             json = []
             for (i = 0; i < output.Words.length; i++) {
                 translation = []
+                buffer = []
                 output.Words[i].OutputLanguageMeanings.forEach(function(definitions) {
-                    translation.push(definitions[0].DisplayText)
+                    definitions.forEach(function(definition) {
+                        buffer.push(definition.DisplayText)
+                    })
+                    translation.push(buffer.join(", "))
+                    buffer = []
                 })
                 json[i] = {
                     "word": output.Words[i].InputLanguageMeanings[0][0].DisplayText,
