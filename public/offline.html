@@ -1,0 +1,6 @@
+<!DOCTYPE html><html><head><title>Morfix Lite</title><meta name="mobile-web-app-capable" content="yes"><meta name="theme-color" content="#3f51b5"><link rel="manifest" href="manifest.json"><meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"><link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"><link href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" rel="stylesheet"><link href="/css/styles.css" rel="stylesheet"></head><body><div class="mdl-layout mdl-js-layout mdl-layout--fixed-header"><header class="mdl-layout__header"><div class="mdl-layout__header-row"><span class="mdl-layout-title">Morfix Lite</span><div class="mdl-layout-spacer"></div></div></header><main class="mdl-layout__content background" id="main"><div class="page-content"><div class="mdl-grid content-grid"><h3 class="center" id="title">OFFLINE<br><br>Touch to retry</h3></div></div></main></div></body></html>
+<script>document.getElementById("main").addEventListener('click', function(e) {
+    if (e.target.tagName !== "H3" && e.target.tagName !== "MAIN") return    
+    location.reload();
+});
+</script>

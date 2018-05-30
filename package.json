@@ -1,9 +1,9 @@
 {
   "name": "morfix-lite",
-  "version": "0.0.2",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/outofink/morfix-lite.git"
+  "version": "0.1.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/outofink/morfix-lite.git"
   },
   "description": "Lightweight Morfix.",
   "main": "node server.js",

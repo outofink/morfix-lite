@@ -1,18 +1,21 @@
 {
+  "short_name": "Morfix Lite",
+  "name": "Morfix Lite",
   "icons": [
     {
-      "src": "ml512.png",
-      "sizes": "512x512",
-      "type": "image/png"
+      "src": "icons/ml192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "icons/ml512.png",
+      "type": "image/png",
+      "sizes": "512x512"
     }
   ],
-  "name": "Morfix Lite",
-  "orientation": "portrait",
-  "display": "standalone",
-  "start_url": ".",
-  "publicPath": null,
-  "short_name": "Morfix Lite",
-  "description": "Lightweight Morfix.",
+  "start_url": "/",
   "background_color": "#eaf2ff",
+  "display": "standalone",
+  "orientation": "portrait",
   "theme_color": "#3f51b5"
 }

@@ -1,18 +1,3 @@
 doctype html
 html
-    include includes/head.pug
-
-    body
-        div(class="mdl-layout mdl-js-layout mdl-layout--fixed-header")
-            include includes/bar.pug
-
-            main(class="mdl-layout__content background" id="main")
-                div(class="page-content")
-                    div(class="mdl-grid content-grid")
-                        h3(id="title" class="center") Touch to search
-                        div(id="spinner", style="display:none", class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active")
-
-script
-    include js/loading.js
-    include js/taptosearch.js
-    include js/detectlang.js
+    include /home.html
