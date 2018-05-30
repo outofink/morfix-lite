@@ -1,5 +1,6 @@
 var CACHE_NAME = 'morflix-lite-v1';
 var urlsToCache = [
+  '/',
   '/home.html',
   '/offline.html',
   '/css/styles.css',
