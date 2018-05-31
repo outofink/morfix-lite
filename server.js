@@ -16,8 +16,6 @@ app.use(sslRedirect());
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-app.locals.basedir = path.join(__dirname, 'public');
-
 app.use(express.static(path.join(__dirname, './public')));
 
 app.get('/', function(req, res) {

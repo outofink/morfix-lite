@@ -11,7 +11,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
-    "heroku-ssl-redirect": "0.0.4",
+    "heroku-ssl-redirect": "^0.0.4",
     "pug": "^2.0.3",
     "request": "^2.87.0"
   }
