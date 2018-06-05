@@ -9,8 +9,8 @@
 
 ## Screenshots
 
-![Home](https://github.com/outofink/morfix-lite/raw/master/screenshots/home.png "Home") &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-![Logo](https://github.com/outofink/morfix-lite/raw/master/screenshots/main.png "Main")
+![Home](https://github.com/outofink/morfix-lite/raw/master/screenshots/home.jpg "Home") &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+![Logo](https://github.com/outofink/morfix-lite/raw/master/screenshots/main.jpg "Main")
 
 ## Status
 
