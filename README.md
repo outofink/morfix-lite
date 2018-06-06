@@ -2,7 +2,7 @@
 <img src="https://github.com/outofink/morfix-lite/raw/master/public/icons/ml192.png">
 </p>
 
-<h1 style="text-align: center"><a href="https://morfix-lite.herokuapp.com">Morflix Lite</a></h1>
+<h1 align="center">Morflix Lite</h1>
 
 
 [Morfix Lite](https://morfix-lite.herokuapp.com) is a extremely lightweight front-end alternative for [Morfix](http://www.morfix.co.il/) using their API.
