@@ -10,10 +10,6 @@
     "prestart": "workbox injectManifest workbox-config.js",
     "start": "node server.js"
   },
-  "engines": {
-    "node": "10.4.0",
-    "npm": "6.1.0"
-  },
   "author": "outofink",
   "dependencies": {
     "body-parser": "^1.18.3",
