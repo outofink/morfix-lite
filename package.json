@@ -8,8 +8,7 @@
   "description": "Lightweight Morfix.",
   "scripts": {
     "prestart": "workbox injectManifest workbox-config.js",
-    "start": "node server.js",
-    "heroku-postbuild": "workbox injectManifest workbox-config.js"
+    "start": "node server.js"
   },
   "engines": {
     "node": "10.4.0",
