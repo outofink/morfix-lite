@@ -1,4 +1,4 @@
-var CACHE_NAME = 'morflix-lite-v3';
+var CACHE_NAME = 'morflix-lite-v4';
 var urlsToCache = [
   '/',
   '/offline.html',

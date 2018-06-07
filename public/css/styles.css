@@ -85,3 +85,7 @@ body {
 .mdl-textfield {
   flex-shrink: 1;
 }
+
+.row {
+  padding: 0 16px 0 24px;
+}
