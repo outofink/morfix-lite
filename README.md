@@ -22,7 +22,7 @@ Go to https://morfix-lite.herokuapp.com and have a go.
 
 ## Bugs and Issues
 
-* Pushing the back button always gives the OFFLINE screen
+None that I know of.
 
 ## Features (as compared to the official Morfix app)
 

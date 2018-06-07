@@ -1,12 +1,19 @@
 {
   "name": "morfix-lite",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/outofink/morfix-lite.git"
   },
   "description": "Lightweight Morfix.",
-  "main": "node server.js",
+  "scripts": {
+    "prestart": "workbox injectManifest workbox-config.js",
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "10.4.0",
+    "npm": "6.1.0"
+  },
   "author": "outofink",
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -15,5 +22,8 @@
     "pug": "^2.0.3",
     "request": "^2.87.0",
     "compression": "^1.7.2"
+  },
+  "devDependencies": {
+    "workbox-cli": "^3.2.0"
   }
 }
