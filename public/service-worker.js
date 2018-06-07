@@ -1,8 +1,10 @@
-var CACHE_NAME = 'morflix-lite-v2';
+var CACHE_NAME = 'morflix-lite-v3';
 var urlsToCache = [
   '/',
   '/offline.html',
   '/css/styles.css',
+  '/css/material.min.css',
+  '/js/material.min.js',
   '/icons/ml192.png',
   '/icons/ml512.png',
   '/manifest.json'
