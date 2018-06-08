@@ -23,7 +23,9 @@ app.use(express.static(path.join(__dirname, './public')));
 app.get('/', function(req, res) {
     res.render('home');
 });
-
+app.get('/.well-known/acme-challenge/:content', function(req, res) {
+    res.send('WfEb7u2WZ7-CX_IYIUxz3JY0vQ_EW3tUQPXzXH12VrI.vz7SHHD1RFHsFEvSlnF-ZGxV9FMNxtPielJF7PiDx0k')
+  })
 app.post('/', function(req, res) {
 
     word = req.body.search;
