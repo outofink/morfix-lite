@@ -24,7 +24,7 @@ app.get('/', function(req, res) {
     res.render('home');
 });
 app.get('/.well-known/acme-challenge/:content', function(req, res) {
-    res.send('WfEb7u2WZ7-CX_IYIUxz3JY0vQ_EW3tUQPXzXH12VrI.vz7SHHD1RFHsFEvSlnF-ZGxV9FMNxtPielJF7PiDx0k')
+    res.send('IWHgg7P0gi9XAqo2JavoDl5v4KP1lQGI6CRpZxbUBC8.vz7SHHD1RFHsFEvSlnF-ZGxV9FMNxtPielJF7PiDx0k')
   })
 app.post('/', function(req, res) {
 
