@@ -5,7 +5,7 @@
 <h1 align="center">Morflix Lite</h1>
 
 
-[Morfix Lite](https://morfix-lite.herokuapp.com) is a extremely lightweight front-end alternative for [Morfix](http://www.morfix.co.il/) using their API.
+[Morfix Lite](https://morfix-lite.herokuapp.com) is an extremely lightweight front-end alternative for [Morfix](http://www.morfix.co.il/) using their API.
 
 ## Screenshots
 
@@ -26,7 +26,7 @@ None that I know of.
 
 ## Features (as compared to the official Morfix app)
 
-### Features that offical app will never impliment
+### Features that the offical app will never impliment
 - [x] Lightweight
 - [x] Fast
 - [x] Web-based
@@ -53,3 +53,7 @@ Clone, then run `npm install` followed by `npm start`.
 * [Material Design Lite](https://getmdl.io/) - Front-end template
 * [Pug](https://pugjs.org) - Template engine
 * [Node + Express](https://expressjs.com/) - Backend
+
+## License
+
+[MIT](https://github.com/outofink/morfix-lite/raw/master/LICENSE.md)
