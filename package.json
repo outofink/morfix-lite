@@ -5,6 +5,7 @@
     "type": "git",
     "url": "https://github.com/outofink/morfix-lite.git"
   },
+  "license" : "MIT",
   "description": "Lightweight Morfix.",
   "scripts": {
     "prestart": "workbox injectManifest workbox-config.js",
