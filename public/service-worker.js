@@ -18,6 +18,10 @@ workbox.precaching.precacheAndRoute([
     "revision": "4190c662792172e136cc6a88dee42348"
   },
   {
+    "url": "index.html",
+    "revision": "73890a6a24504706d4ab746b2dcc5448"
+  },
+  {
     "url": "js/material.min.js",
     "revision": "713af0c6ce93dbbce2f00bf0a98d0541"
   },
