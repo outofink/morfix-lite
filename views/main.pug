@@ -10,18 +10,16 @@ html
                 div(class="page-content")
                     div(class="mdl-grid content-grid")
                         h3(id="title", class="center") #{title}
-                        - for (key in JSON.stringify(data)) {
-                            - if (data.hasOwnProperty(key)) {
-                                div(class="card mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp")
-                                    div(class="mdl-card__title mdl-card--border", dir="auto")
-                                        p(class="mdl-card__title-text") #{data[key].word}
-                                        p(class="mdl-card__title-text diber") #{data[key].diber}
-                                    div(class="mdl-card__supporting-text box", dir="auto") 
-                                        - for(part in data[key].translation) {
-                                            p(class="trans") #{data[key].translation[part]}
-                                        - }
-                            - }
-                        - }
+                        - data.forEach(function(key) {
+                            div(class="card mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp")
+                                div(class="mdl-card__title mdl-card--border", dir="auto")
+                                    p(class="mdl-card__title-text") #{key.word}
+                                    p(class="mdl-card__title-text diber") #{key.diber}
+                                div(class="mdl-card__supporting-text box", dir="auto") 
+                                    - key.translation.forEach(function(part){
+                                        p(class="trans") #{part}
+                                    - })
+                        - })
                         - if (data.length == 0) {
                             div(class="card mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp")
                                 div(class="mdl-card__title mdl-card--border no-results", dir="auto")
