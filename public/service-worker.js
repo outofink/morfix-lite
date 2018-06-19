@@ -1,4 +1,4 @@
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.2.0/workbox-sw.js");
+importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.3.0/workbox-sw.js");
 
 workbox.precaching.precacheAndRoute([
   {
@@ -7,7 +7,7 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "css/styles.css",
-    "revision": "52e37f2f5260eb28317262351db52076"
+    "revision": "3d8bf26a398b576e1cce30c6f47eb0e4"
   },
   {
     "url": "icons/ml192.png",
@@ -23,11 +23,11 @@ workbox.precaching.precacheAndRoute([
   },
   {
     "url": "manifest.json",
-    "revision": "b05d25d42b3c1bb541982444ebf9f3ee"
+    "revision": "2bf081b42efa1121e0865250b1397eb7"
   },
   {
     "url": "offline.html",
-    "revision": "2c91d3d7435d61bf17a55824bf5b89d6"
+    "revision": "afbe22c6e84f5cdb95f35872aacc0c1c"
   }
 ])
 

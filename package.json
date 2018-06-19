@@ -1,11 +1,11 @@
 {
   "name": "morfix-lite",
-  "version": "0.2.1",
+  "version": "0.3.0",
   "repository": {
     "type": "git",
     "url": "https://github.com/outofink/morfix-lite.git"
   },
-  "license" : "MIT",
+  "license": "MIT",
   "description": "Lightweight Morfix.",
   "scripts": {
     "prestart": "workbox injectManifest workbox-config.js",
@@ -23,6 +23,6 @@
     "pug": "^2.0.3",
     "request": "^2.87.0",
     "compression": "^1.7.2",
-    "workbox-cli": "^3.2.0"
+    "workbox-cli": "^3.3.0"
   }
 }
