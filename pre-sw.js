@@ -11,10 +11,6 @@ self.addEventListener('activate', function (event) {
 });
 
 self.addEventListener('fetch', function (event) {
-  if (event.request.url === '/') {
-    const strat = new workbox.strategies.staleWhileRevalidate();
-    event.respondWith(strat.handle({event}));
-  }
   if (!navigator.onLine) {
     event.respondWith(
       fetch(event.request).catch(function (_error) {

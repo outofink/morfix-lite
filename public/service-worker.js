@@ -28,10 +28,6 @@ workbox.precaching.precacheAndRoute([
   {
     "url": "offline.html",
     "revision": "afbe22c6e84f5cdb95f35872aacc0c1c"
-  },
-  {
-    "url": "/",
-    "revision": "fc5beb50fac547ead823f764c6d163f4"
   }
 ])
 
@@ -44,10 +40,6 @@ self.addEventListener('activate', function (event) {
 });
 
 self.addEventListener('fetch', function (event) {
-  if (event.request.url === '/') {
-    const strat = new workbox.strategies.staleWhileRevalidate();
-    event.respondWith(strat.handle({event}));
-  }
   if (!navigator.onLine) {
     event.respondWith(
       fetch(event.request).catch(function (_error) {
