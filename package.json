@@ -1,6 +1,6 @@
 {
   "name": "morfix-lite",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/outofink/morfix-lite.git"
@@ -12,17 +12,17 @@
     "start": "node server.js"
   },
   "engines": {
-    "node": "10.16.0",
-    "npm": "6.10.1"
+    "node": "12.13.0",
+    "npm": "6.12.0"
   },
   "author": "outofink",
   "dependencies": {
     "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
     "express": "^4.17.1",
     "heroku-ssl-redirect": "^0.0.4",
     "pug": "^2.0.4",
     "request": "^2.88.0",
-    "compression": "^1.7.4",
     "workbox-cli": "^4.3.1"
   }
 }
