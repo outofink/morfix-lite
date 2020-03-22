@@ -2,7 +2,6 @@ var express = require('express');
 var path = require('path');
 var request = require('request');
 var bodyParser = require('body-parser');
-var sslRedirect = require('heroku-ssl-redirect');
 var compression = require('compression');
 
 var app = express();
@@ -12,7 +11,6 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(bodyParser.json());
-app.use(sslRedirect());
 app.use(compression());
 
 app.set('views', path.join(__dirname, 'views'));
