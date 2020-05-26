@@ -10,21 +10,18 @@ html
                 div(class="page-content")
                     div(class="mdl-grid content-grid")
                         h3(id="title", class="center") #{title}
-                        - data.forEach(function(key) {
+                        each key in data
                             div(class="card mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp")
                                 div(class="mdl-card__title mdl-card--border", dir="auto")
                                     p(class="mdl-card__title-text") #{key.word}
                                     p(class="mdl-card__title-text diber") #{key.diber}
                                 div(class="mdl-card__supporting-text box", dir="auto") 
-                                    - key.translation.forEach(function(part){
+                                    each part in key.translation
                                         p(class="trans") #{part}
-                                    - })
-                        - })
-                        - if (data.length == 0) {
+                        if !data.length
                             div(class="card mdl-card mdl-cell mdl-cell--12-col mdl-shadow--2dp")
                                 div(class="mdl-card__title mdl-card--border no-results", dir="auto")
                                     p(class="mdl-card__title-text results") No results found
-                        - }
                         div(id="spinner", style="display:none", class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active")
 
 script
