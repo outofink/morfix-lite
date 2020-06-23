@@ -1,0 +1,32 @@
+name: Build and Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v2
+        with:
+          persist-credentials: false
+
+      - name: Install and Build 🔧 # This example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
+        run: |
+          npm install
+          vue-cli-service build
+
+      - name: Install SSH Client 🔑
+        uses: webfactory/ssh-agent@v0.2.0 # This step installs the ssh client into the workflow run. There's many options available for this on the action marketplace.
+        with:
+          ssh-private-key: ${{ secrets.Actions }}
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          BASE_BRANCH: master
+          BRANCH: gh-pages
+          FOLDER: dist
+          CLEAN: true
+          SSH: true # SSH must be set to true so the deploy action knows which protocol to deploy with.
