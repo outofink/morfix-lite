@@ -16,40 +16,21 @@ export default {
   },
   data() {
     return {
-      todos: [
-        {
-          id: 1,
-          word: "help",
-          pos: "verb",
-          translation: ["עזרה", "לעזור"]
-        },
-        {
-          id: 2,
-          word: "death",
-          pos: "noun",
-          translation: ["מוות", "למות"]
-        },
-        {
-          id: 3,
-          word: "hello!",
-          pos: "exclamation",
-          translation: ["שלום!", "היי!"]
-        }
-      ]
+      todos: { }
     }
   },
   methods: {
     AddTodo(newTodo) {
-      console.log(newTodo)
       axios.post('https://cors-anywhere.herokuapp.com/http://services.morfix.com/translationhebrew/TranslationService/GetTranslation/', 
       {
         Query: newTodo,
         ClientName:"Android_Hebrew"
       })
       .then(res => {
-        let output = res.data
-        let json = [];
-        for (let word of output.Words) {
+        let data = res.data
+        let lang = data.TranslationTypeValue - 1 ? "Hebrew" : "English";
+        let results = [];
+        for (let word of data.Words) {
           let translation = [];
           for (let definitions of word.OutputLanguageMeanings) {
             let buffer = [];
@@ -58,15 +39,14 @@ export default {
             }
             translation.push(buffer.join(', '));
           }
-          console.log(word.ID)
-          json.push({
+          results.push({
             "id": word.ID,
             'word': word.InputLanguageMeanings[0][0].DisplayText,
             'pos': word.PartOfSpeech,
             'translation': translation,
           })
         }
-        this.todos = json
+        this.todos = {metadata: {lang}, data: results}
       })
       .catch(err => console.log(err))
     } 

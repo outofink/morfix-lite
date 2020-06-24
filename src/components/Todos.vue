@@ -1,7 +1,7 @@
 <template>
     <div>
-        <div v-bind:key="todo.id" v-for="todo in todos">
-            <TodoItem v-bind:todo="todo"/>
+        <div v-bind:key="todo.id" v-for="todo in todos.data">
+            <TodoItem v-bind:todo="todo" :lang="todos.metadata.lang"/>
         </div>
             
     </div>

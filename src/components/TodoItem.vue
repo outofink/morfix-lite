@@ -1,9 +1,9 @@
 <template>
     <div class="todo-item">
-        <h1>{{todo.word}}</h1>
-        <h6>{{todo.pos}}</h6>
+        <h1 v-bind:class="{'ltr': lang === 'English', 'rtl': lang === 'Hebrew'}">{{todo.word}}</h1>
+        <h6 v-bind:class="{'ltr': lang === 'English', 'rtl': lang === 'Hebrew'}">{{todo.pos}}</h6>
         <div v-for="trans in todo.translation" :key="trans">
-            <h2>{{trans}}</h2>
+            <h2 v-bind:class="{'rtl': lang === 'English', 'ltr': lang === 'Hebrew'}">{{trans}}</h2>
         </div>
 
     </div>
@@ -12,7 +12,7 @@
 <script>
 export default {
     name: "TodoItem",
-    props: ["todo"]
+    props: ["todo", "lang"]
 }
 </script>
 
@@ -33,5 +33,11 @@ export default {
     border-radius: 50%;
     cursor: pointer;
     float: right;
+  }
+  .rtl {
+    direction: rtl;
+  }
+  .ltr {
+    direction: ltr;
   }
 </style>
