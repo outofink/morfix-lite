@@ -1,14 +1,12 @@
 <template>
-  <div id="app">
-    <div id="app">
-      <v-app id="inspire">
-        <div>
-          <TopBar @add-todo="AddTodo"/>
-          <Todos :todos="todos" />
-        </div>
-      </v-app>
-    </div>
-  </div>
+  <v-app id="morfix-lite">
+    <TopBar @add-todo="AddTodo"/>
+    <v-main style="background-color: hsl(213, 92%, 95%)">
+      <v-container fluid>
+        <Todos :todos="todos" />
+      </v-container>
+    </v-main>
+  </v-app>
 </template>
 
 <script>
@@ -61,24 +59,5 @@ export default {
 </script>
 
 <style>
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.4;
-  }
-  .btn {
-    display: inline-block;
-    border: none;
-    background: #555;
-    color: #fff;
-    padding: 7px 20px;
-    cursor: pointer;
-  }
-  .btn:hover {
-    background: #666;
-  }
+
 </style>

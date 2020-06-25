@@ -2,8 +2,7 @@
   <div>
     <div v-for="todo in todos.data" :key="todo.id">
       <TodoItem :todo="todo" :lang="todos.metadata.lang"/>
-    </div>
-            
+    </div> 
   </div>
 </template>
 

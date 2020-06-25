@@ -1,29 +1,29 @@
 <template>
-  <div>
-    <v-app-bar color="blue accent-4" dark flat>  
-      <v-toolbar-title>Morfix Lite</v-toolbar-title>
-      <v-spacer/>
-      <form @submit="addTodo">
-        <v-row>
-          <v-text-field 
-            v-model="search"
-            prepend-inner-icon="search"
-            placeholder="Search..."
-            single-line
-            color="blue"
-            hide-details
-            solo-inverted
-            flat
-            clearable
-            clear-icon="clear"
-          />
-        </v-row>
-      </form>
-    </v-app-bar>
-  </div>
+  <v-app-bar color="blue accent-2" app dark flat>
+    <v-icon large class="d-flex d-sm-none">$morfix</v-icon>
+    <v-toolbar-title class="d-none d-sm-flex">Morfix Lite</v-toolbar-title>
+    <v-spacer/>
+    <v-form @submit="addTodo">
+      <v-row style="margin-left: 15px">
+        <v-text-field 
+          v-model="search"
+          prepend-inner-icon="search"
+          placeholder="Search..."
+          single-line
+          color="blue"
+          hide-details
+          solo-inverted
+          flat
+          clearable
+          clear-icon="clear"
+        />
+      </v-row>
+    </v-form>
+  </v-app-bar>
 </template>
 
 <script>
+
 export default {
   name: "TopBar",
   data() {
@@ -42,14 +42,5 @@ export default {
 </script>
 
 <style scoped>
-  form {
-    display: flex;
-  }
-  input[type="text"] {
-    flex: 10;
-    padding: 5px;
-  }
-  input[type="submit"] {
-    flex: 2;
-  }
+
 </style>
