@@ -6,7 +6,9 @@
     <v-form @submit="addTodo">
       <v-row style="margin-left: 15px">
         <v-text-field 
+          id="search"
           v-model="search"
+          autocomplete="off"
           prepend-inner-icon="search"
           placeholder="Search..."
           single-line
@@ -36,6 +38,7 @@ export default {
       e.preventDefault()
       this.$emit("add-todo", this.search)
       this.search = ''
+      document.getElementById("search").blur()
     }
   }
 }

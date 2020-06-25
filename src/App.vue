@@ -13,6 +13,7 @@
 import Todos from './components/Todos'
 import TopBar from './components/TopBar'
 import axios from 'axios'
+
 export default {
   name: 'App',
   components: {
@@ -22,6 +23,14 @@ export default {
     return {
       todos: { }
     }
+  },
+  mounted() {
+    document.getElementById("morfix-lite").addEventListener('click', function(e) {
+      for (let i of ["v-main__wrap", "container"]) {
+        if (e.target.classList.contains(i)) document.getElementById("search").focus()
+      }
+      return
+    });
   },
   methods: {
     AddTodo(newTodo) {
