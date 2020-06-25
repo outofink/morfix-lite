@@ -1,27 +1,28 @@
 <template>
   <v-app id="morfix-lite">
-    <TopBar @add-todo="AddTodo"/>
+    <TopBar @search="AddTodo"/>
     <v-main style="background-color: hsl(213, 92%, 95%)">
       <v-container fluid>
-        <Todos :todos="todos" />
+        <Main :show="show" :cards="cards" />
       </v-container>
     </v-main>
   </v-app>
 </template>
 
 <script>
-import Todos from './components/Todos'
+import Main from './components/Main'
 import TopBar from './components/TopBar'
 import axios from 'axios'
 
 export default {
   name: 'App',
   components: {
-    Todos, TopBar
+    Main, TopBar
   },
   data() {
     return {
-      todos: { }
+      show: false,
+      cards: { }
     }
   },
   mounted() {
@@ -34,6 +35,7 @@ export default {
   },
   methods: {
     AddTodo(newTodo) {
+      this.show = false
       axios.post('https://cors-anywhere.herokuapp.com/http://services.morfix.com/translationhebrew/TranslationService/GetTranslation/', 
                  {
                    Query: newTodo,
@@ -59,9 +61,10 @@ export default {
               'translation': translation,
             })
           }
-          this.todos = {metadata: {lang}, data: results}
+          this.cards = {metadata: {lang}, data: results}
         })
         .catch(err => console.log(err))
+        .finally(() => this.show = true)
     } 
   }
 }

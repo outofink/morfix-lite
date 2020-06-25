@@ -1,0 +1,33 @@
+<template>
+  <v-scroll-x-transition>
+    <!-- <v-skeleton-loader v-if="!show" 
+                       outlined max-width="450"
+                       class="mx-auto my-2"
+                       type="article"
+    /> -->
+    <v-card v-if="show" outlined max-width="450" class="mx-auto my-2">
+      <v-card-title :class="{'ltr': lang === 'English', 'rtl': lang === 'Hebrew'}">{{card.word}}</v-card-title>
+      <v-card-subtitle :class="{'ltr': lang === 'English', 'rtl': lang === 'Hebrew'}">{{card.pos}}</v-card-subtitle>
+      <v-card-text class="text-body-1" :class="{'rtl': lang === 'English', 'ltr': lang === 'Hebrew'}">
+        <div v-for="trans in card.translation" :key="trans">{{trans}}</div>
+      </v-card-text>
+    </v-card>
+  </v-scroll-x-transition>
+
+</template>
+
+<script>
+export default {
+  name: "Card",
+  props: ["card", "lang", "show"]
+}
+</script>
+
+<style scoped>
+  .rtl {
+    direction: rtl;
+  }
+  .ltr {
+    direction: ltr;
+  }
+</style>

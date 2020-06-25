@@ -36,7 +36,7 @@ export default {
   methods: {
     addTodo(e) {
       e.preventDefault()
-      this.$emit("add-todo", this.search)
+      this.$emit("search", this.search)
       this.search = ''
       document.getElementById("search").blur()
     }
