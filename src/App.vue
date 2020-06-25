@@ -1,7 +1,7 @@
 <template>
   <v-app id="morfix-lite">
     <TopBar @search="Search"/>
-    <v-main style="background-color: hsl(213, 92%, 95%)">
+    <v-main style="background-color: hsl(218, 100%, 95%)">
       <v-container fluid>
         <Main :show="show" :cards="cards" />
       </v-container>

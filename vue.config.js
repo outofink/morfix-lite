@@ -6,9 +6,9 @@ module.exports = {
   pwa: {
     name: 'Morfix Lite',
     themeColor: '#448AFF',
-    msTileColor: '#E7F1FE',
+    msTileColor: '#E5EFFF',
     manifestOptions: {
-      background_color: '#E7F1FE'
+      background_color: '#E5EFFF'
     }
   },
 
