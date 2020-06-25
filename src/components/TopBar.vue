@@ -1,25 +1,24 @@
 <template>
   <v-app-bar color="blue accent-2" app dark flat>
-    <v-icon large class="d-flex d-sm-none">$morfix</v-icon>
+    <v-btn icon class="d-flex d-sm-none mx-auto"><v-icon x-large >$morfix</v-icon></v-btn>
     <v-toolbar-title class="d-none d-sm-flex">Morfix Lite</v-toolbar-title>
     <v-spacer/>
-    <v-form @submit="addTodo">
-      <v-row style="margin-left: 15px">
-        <v-text-field 
-          id="search"
-          v-model="search"
-          autocomplete="off"
-          prepend-inner-icon="search"
-          placeholder="Search..."
-          single-line
-          color="blue"
-          hide-details
-          solo-inverted
-          flat
-          clearable
-          clear-icon="clear"
-        />
-      </v-row>
+    <v-form style="margin-left: 15px" :class="{full: $vuetify.breakpoint.xs}" @submit="DoSearch">
+      <v-text-field 
+        id="search"
+        v-model="search"
+        autocomplete="off"
+        prepend-inner-icon="search"
+        placeholder="Search..."
+        single-line
+        color="blue"
+        hide-details
+        solo-inverted
+        flat
+        clearable
+        rounded
+        clear-icon="clear"
+      />
     </v-form>
   </v-app-bar>
 </template>
@@ -34,7 +33,7 @@ export default {
     }
   },
   methods: {
-    addTodo(e) {
+    DoSearch(e) {
       e.preventDefault()
       this.$emit("search", this.search)
       this.search = ''
@@ -45,5 +44,7 @@ export default {
 </script>
 
 <style scoped>
-
+  .full {
+    width: 100%
+  }
 </style>
