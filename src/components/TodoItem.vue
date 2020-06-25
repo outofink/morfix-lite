@@ -1,18 +1,18 @@
 <template>
-    <div class="todo-item">
-        <h1 v-bind:class="{'ltr': lang === 'English', 'rtl': lang === 'Hebrew'}">{{todo.word}}</h1>
-        <h6 v-bind:class="{'ltr': lang === 'English', 'rtl': lang === 'Hebrew'}">{{todo.pos}}</h6>
-        <div v-for="trans in todo.translation" :key="trans">
-            <h2 v-bind:class="{'rtl': lang === 'English', 'ltr': lang === 'Hebrew'}">{{trans}}</h2>
-        </div>
-
+  <div class="todo-item">
+    <h1 :class="{'ltr': lang === 'English', 'rtl': lang === 'Hebrew'}">{{todo.word}}</h1>
+    <h6 :class="{'ltr': lang === 'English', 'rtl': lang === 'Hebrew'}">{{todo.pos}}</h6>
+    <div v-for="trans in todo.translation" :key="trans">
+      <h2 :class="{'rtl': lang === 'English', 'ltr': lang === 'Hebrew'}">{{trans}}</h2>
     </div>
+
+  </div>
 </template>
 
 <script>
 export default {
-    name: "TodoItem",
-    props: ["todo", "lang"]
+  name: "TodoItem",
+  props: ["todo", "lang"]
 }
 </script>
 
