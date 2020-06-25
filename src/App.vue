@@ -1,6 +1,6 @@
 <template>
   <v-app id="morfix-lite">
-    <TopBar @search="AddTodo"/>
+    <TopBar @search="Search"/>
     <v-main style="background-color: hsl(213, 92%, 95%)">
       <v-container fluid>
         <Main :show="show" :cards="cards" />
@@ -34,11 +34,11 @@ export default {
     });
   },
   methods: {
-    AddTodo(newTodo) {
+    Search(query) {
       this.show = false
       axios.post('https://cors-anywhere.herokuapp.com/http://services.morfix.com/translationhebrew/TranslationService/GetTranslation/', 
                  {
-                   Query: newTodo,
+                   Query: query,
                    ClientName:"Android_Hebrew"
                  })
         .then(res => {
