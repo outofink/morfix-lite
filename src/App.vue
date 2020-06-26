@@ -37,7 +37,7 @@ export default {
   methods: {
     Search(query) {
       this.show = false
-      setTimeout(() => this.skeleton = true, 250)
+      setTimeout(() => this.skeleton = true, 300)
       axios.post('https://cors-anywhere.herokuapp.com/http://services.morfix.com/translationhebrew/TranslationService/GetTranslation/', 
                  {
                    Query: query,
@@ -68,7 +68,7 @@ export default {
         .catch(err => console.log(err))
         .finally(() => {
           this.skeleton = false
-          setTimeout(() => this.show = true, 250)
+          setTimeout(() => this.show = true, 300)
         })
     } 
   }
