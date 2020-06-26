@@ -38,9 +38,12 @@ export default {
     Search(query) {
       this.show = false
       setTimeout(() => this.skeleton = true, 300)
+
+      const sanitizedQuery = query.replace(/[`~!@#$%^&*()_|+=?;:'",.<>{}[\]\\/]/gi, '');
+
       axios.post('https://cors-anywhere.herokuapp.com/http://services.morfix.com/translationhebrew/TranslationService/GetTranslation/', 
                  {
-                   Query: query,
+                   Query: sanitizedQuery,
                    ClientName:"Android_Hebrew"
                  })
         .then(res => {
