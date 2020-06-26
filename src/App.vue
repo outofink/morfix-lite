@@ -3,7 +3,7 @@
     <TopBar @search="Search"/>
     <v-main style="background-color: hsl(218, 100%, 95%)">
       <v-container fluid>
-        <Main :show="show" :cards="cards" />
+        <Main :show="show" :skeleton="skeleton" :cards="cards" />
       </v-container>
     </v-main>
   </v-app>
@@ -22,6 +22,7 @@ export default {
   data() {
     return {
       show: false,
+      skeleton: false,
       cards: { }
     }
   },
@@ -36,6 +37,7 @@ export default {
   methods: {
     Search(query) {
       this.show = false
+      setTimeout(() => this.skeleton = true, 250)
       axios.post('https://cors-anywhere.herokuapp.com/http://services.morfix.com/translationhebrew/TranslationService/GetTranslation/', 
                  {
                    Query: query,
@@ -64,7 +66,10 @@ export default {
           this.cards = {metadata: {lang}, data: results}
         })
         .catch(err => console.log(err))
-        .finally(() => this.show = true)
+        .finally(() => {
+          this.skeleton = false
+          setTimeout(() => this.show = true, 250)
+        })
     } 
   }
 }

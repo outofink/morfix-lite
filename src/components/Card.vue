@@ -1,10 +1,5 @@
 <template>
   <v-scroll-x-transition>
-    <!-- <v-skeleton-loader v-if="!show" 
-                       outlined max-width="450"
-                       class="mx-auto my-2"
-                       type="article"
-    /> -->
     <v-card v-if="show" outlined max-width="450" class="mx-auto my-2">
       <v-card-title style="font-size: 1.5rem" :class="{'ltr': lang === 'English', 'rtl': lang === 'Hebrew'}">{{card.word}}</v-card-title>
       <v-card-subtitle :class="{'ltr': lang === 'English', 'rtl': lang === 'Hebrew'}">{{card.pos}}</v-card-subtitle>
@@ -13,13 +8,12 @@
       </v-card-text>
     </v-card>
   </v-scroll-x-transition>
-
 </template>
 
 <script>
 export default {
   name: "Card",
-  props: ["card", "lang", "show"]
+  props: ["card", "lang", "show", "skeleton"]
 }
 </script>
 
