@@ -1,17 +1,16 @@
 module.exports = {
-  "transpileDependencies": [
-    "vuetify"
-  ],
+  transpileDependencies: ['vuetify'],
 
   pwa: {
     name: 'Morfix Lite',
     themeColor: '#448AFF',
     msTileColor: '#E5EFFF',
+    appleMobileWebAppCapable: 'yes',
     manifestOptions: {
-      background_color: '#E5EFFF'
-    }
+      background_color: '#E5EFFF',
+    },
   },
 
   publicPath: '',
-  productionSourceMap: false
+  productionSourceMap: false,
 }

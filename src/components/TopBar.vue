@@ -1,10 +1,10 @@
 <template>
   <v-app-bar color="blue accent-2" app dark flat>
-    <v-btn icon class="d-flex d-sm-none mx-auto"><v-icon x-large >$morfix</v-icon></v-btn>
+    <v-btn icon class="d-flex d-sm-none mx-auto"><v-icon x-large>$morfix</v-icon></v-btn>
     <v-toolbar-title class="d-none d-sm-flex">Morfix Lite</v-toolbar-title>
-    <v-spacer/>
-    <v-form style="margin-left: 15px" :class="{full: $vuetify.breakpoint.xs}" @submit="DoSearch">
-      <v-text-field 
+    <v-spacer />
+    <v-form style="margin-left: 15px;" :style="$vuetify.breakpoint.xs ? { width: '100%' } : {}" @submit="DoSearch">
+      <v-text-field
         id="search"
         v-model="search"
         autocomplete="off"
@@ -24,27 +24,22 @@
 </template>
 
 <script>
-
 export default {
-  name: "TopBar",
+  name: 'TopBar',
   data() {
     return {
-      search: ''
+      search: '',
     }
   },
   methods: {
     DoSearch(e) {
       e.preventDefault()
-      this.$emit("search", this.search)
+      this.$emit('search', this.search)
       this.search = ''
-      document.getElementById("search").blur()
-    }
-  }
+      document.getElementById('search').blur()
+    },
+  },
 }
 </script>
 
-<style scoped>
-  .full {
-    width: 100%
-  }
-</style>
+<style scoped></style>
