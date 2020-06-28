@@ -83,6 +83,9 @@ export default {
 </script>
 
 <style>
+.rtl {
+  direction: rtl;
+}
 .bg {
   background-color: hsl(218, 100%, 95%);
 }

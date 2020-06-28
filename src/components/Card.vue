@@ -25,10 +25,4 @@ export default {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
-.rtl {
-  direction: rtl;
-}
-.ltr {
-  direction: ltr;
-}
 </style>

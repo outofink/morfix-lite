@@ -18,6 +18,8 @@
         clearable
         rounded
         clear-icon="clear"
+        :class="{ rtl: !english }"
+        @input="CheckLang"
       />
     </v-form>
   </v-app-bar>
@@ -28,6 +30,7 @@ export default {
   name: 'TopBar',
   data() {
     return {
+      english: true,
       search: '',
     }
   },
@@ -36,7 +39,12 @@ export default {
       e.preventDefault()
       this.$emit('search', this.search)
       this.search = ''
+      this.english = true
       document.getElementById('search').blur()
+    },
+    CheckLang() {
+      if (!this.search) return true
+      this.english = this.search.match(/^[a-zA-Z(?:^| )[0-9]+(?:\.[0-9]+)?(?: |$)$]*$/)
     },
   },
 }
