@@ -14,7 +14,7 @@
     </v-scroll-x-transition>
     <v-scroll-x-transition>
       <v-card v-if="show && cards.data.length === 0" outlined max-width="450" class="mx-auto my-2">
-        <v-card-title primary-title class="justify-center font-italic text-h5 text--secondary" >No results found.</v-card-title>
+        <v-card-title primary-title class="justify-center font-italic text-h5 text--secondary" >no results found</v-card-title>
       </v-card>
     </v-scroll-x-transition>
   </div>
