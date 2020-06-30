@@ -44,8 +44,8 @@ export default {
       document.getElementById('search').blur()
     },
     CheckLang() {
-      if (!this.search) return true
-      this.english = this.search.match(/^[a-zA-Z(?:^| )[0-9]+(?:\.[0-9]+)?(?: |$)$]*$/)
+      this.english = this.search.charCodeAt(0) < 128
+      if (!this.search) this.english = true
     },
   },
 }
