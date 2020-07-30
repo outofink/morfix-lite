@@ -26,7 +26,7 @@ None that I know of.
 
 ## Features (as compared to the official Morfix app)
 
-### Features that the offical app will never impliment
+### Features that the offical app will never implement
 - [x] Lightweight
 - [x] Fast
 - [x] Web-based
@@ -39,7 +39,7 @@ None that I know of.
 - [ ] Suggestive search
 - [ ] Audio playback
 
-### Features that will never be implimented
+### Features that will never be implemented
 - [ ] Quizzes
 - [ ] Primium
 - [ ] Ads
