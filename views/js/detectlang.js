@@ -1,15 +1,14 @@
-var query = document.getElementById("search")
+const query = document.getElementById('search');
 
-query.addEventListener('input', function (e) {
-    if(containsEnglish(query.value)) {
-        query.className = "mdl-textfield__input text-eng"
-    }
-    else {
-        query.className = "mdl-textfield__input text-heb"
-    }
+query.addEventListener('input', function(e) {
+  if (containsEnglish(query.value)) {
+    query.className = 'mdl-textfield__input text-eng';
+  } else {
+    query.className = 'mdl-textfield__input text-heb';
+  }
 }, false);
 
-containsEnglish = function (text) {
-    if (!text) return false
-    return text.match(/^[a-zA-Z(?:^| )[0-9]+(?:\.[0-9]+)?(?: |$)$]*$/)
-}
+containsEnglish = function(text) {
+  if (!text) return false;
+  return text.match(/^[a-zA-Z(?:^| )[0-9]+(?:\.[0-9]+)?(?: |$)$]*$/);
+};
