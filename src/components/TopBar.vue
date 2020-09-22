@@ -38,7 +38,7 @@ export default {
   methods: {
     DoSearch(e) {
       e.preventDefault()
-      this.$emit('search', this.search)
+      //this.$emit('search', this.search)
       this.$router.push({ path: this.search })
       this.search = ''
       this.english = true

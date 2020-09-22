@@ -11,12 +11,15 @@ app.use(cors())
 app.use(history())
 
 app.use(express.static(path.join(__dirname, '../dist')))
-app.post('/search', function(req, res) {
-  axios.post('http://services.morfix.com/translationhebrew/TranslationService/GetTranslation/',
-    { Query: req.body.word, ClientName: 'Android_Hebrew' })
-      .then(function (response) {
-        res.send(response.data)
-      })
+app.post('/search', function (req, res) {
+  axios
+    .post('http://services.morfix.com/translationhebrew/TranslationService/GetTranslation/', {
+      Query: req.body.word,
+      ClientName: 'Android_Hebrew',
+    })
+    .then(function (response) {
+      res.send(response.data)
+    })
 })
 
 const port = process.env.PORT || 5000

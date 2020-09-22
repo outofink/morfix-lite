@@ -27,10 +27,10 @@ export default {
       cards: {},
     }
   },
+  watch: {
+    $route: 'Check',
+  },
   mounted() {
-    if (this.$route.params.word) {
-      this.Search(this.$route.params.word)
-    }
     document.getElementById('morfix-lite').addEventListener('click', function (e) {
       for (let i of ['v-main__wrap', 'container']) {
         if (e.target.classList.contains(i)) document.getElementById('search').focus()
@@ -38,7 +38,15 @@ export default {
       return
     })
   },
+  created() {
+    this.Check()
+  },
   methods: {
+    Check() {
+      if (this.$route.params.word) {
+        this.Search(this.$route.params.word)
+      }
+    },
     Search(query) {
       this.show = false
       setTimeout(() => (this.skeleton = true), 300)
