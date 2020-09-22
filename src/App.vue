@@ -28,6 +28,9 @@ export default {
     }
   },
   mounted() {
+    if (this.$route.params.word) {
+      this.Search(this.$route.params.word)
+    }
     document.getElementById('morfix-lite').addEventListener('click', function (e) {
       for (let i of ['v-main__wrap', 'container']) {
         if (e.target.classList.contains(i)) document.getElementById('search').focus()
