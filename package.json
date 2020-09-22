@@ -22,14 +22,16 @@
     "@vue/cli-plugin-router": "^4.5.6",
     "@vue/cli-service": "~4.4.6",
     "babel-eslint": "^10.1.0",
-    "eslint": "^7.5.0",
+    "eslint": "^7.9.0",
+    "eslint-config-prettier": "^6.11.0",
     "eslint-loader": "^4.0.2",
+    "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-vue": "^6.2.2",
     "prettier": "^2.0.5",
     "sass": "^1.26.10",
     "sass-loader": "^9.0.2",
     "vue-cli-plugin-vuetify": "^2.0.7",
-    "vue-template-compiler": "^2.6.11",
+    "vue-template-compiler": "^2.6.12",
     "vuetify-loader": "^1.6.0"
   },
   "eslintConfig": {
@@ -40,7 +42,8 @@
     "extends": [
       "plugin:vue/essential",
       "eslint:recommended",
-      "prettier/vue"
+      "prettier/vue",
+      "plugin:prettier/recommended"
     ],
     "parserOptions": {
       "parser": "babel-eslint"
