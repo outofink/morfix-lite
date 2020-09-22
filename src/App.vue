@@ -46,13 +46,7 @@ export default {
       const sanitizedQuery = query.replace(/[`~!@#$%^&*()_|+=?;:'",.<>{}[\]\\/]/gi, '')
 
       axios
-        .post(
-          'https://cors-anywhere.herokuapp.com/http://services.morfix.com/translationhebrew/TranslationService/GetTranslation/',
-          {
-            Query: sanitizedQuery,
-            ClientName: 'Android_Hebrew',
-          }
-        )
+        .post('/search', { word: sanitizedQuery })
         .then((res) => {
           let data = res.data
           let fromEnglish = data.TranslationTypeValue - 1
