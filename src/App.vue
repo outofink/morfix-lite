@@ -80,6 +80,7 @@ export default {
         .catch((err) => console.log(err))
         .finally(() => {
           this.skeleton = false
+          document.title = 'Morfix Lite - ' + this.$route.params.word
           setTimeout(() => (this.show = true), 300)
         })
     },
