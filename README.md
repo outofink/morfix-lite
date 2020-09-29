@@ -7,8 +7,7 @@
 [Morfix Lite](https://morfix-lite.herokuapp.com) is an extremely lightweight front-end alternative for [Morfix](http://www.morfix.co.il/) using their API.
 
 
-## This repo is no longer maintained.
-## Windows, Linux and MacOS users, please check out https://github.com/outofink/ml-vue
+<h1 align="center">This repo is no longer maintained. Please check out https://github.com/outofink/ml-vue</h2>
 
 ## Screenshots
 
