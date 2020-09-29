@@ -1,11 +1,8 @@
-# This repo is no longer maintained. Please check out <a>https://github.com/outofink/ml-vue
-
-
 <p align="center">
 <img src="https://github.com/outofink/morfix-lite/raw/master/public/icons/ml192.png">
 </p>
 
-<h1 align="center">Morflix Lite (old)</h1>
+<h1 align="center">Morfix Lite (old)</h1>
 
 [Morfix Lite](https://morfix-lite.herokuapp.com) is an extremely lightweight front-end alternative for [Morfix](http://www.morfix.co.il/) using their API.
 
