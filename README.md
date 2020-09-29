@@ -1,4 +1,4 @@
-<h1 align="center">This repo is no longer maintained. Please check out <a>https://github.com/outofink/ml-vue</a></h1>
+# This repo is no longer maintained. Please check out <a>https://github.com/outofink/ml-vue
 
 
 <p align="center">
