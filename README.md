@@ -1,3 +1,5 @@
+# This repo is no longer maintained. Please check out https://github.com/outofink/ml-vue
+
 <p align="center">
 <img src="https://github.com/outofink/morfix-lite/raw/master/public/icons/ml192.png">
 </p>
