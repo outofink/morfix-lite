@@ -21,9 +21,9 @@ that's it.
 
 ## Screenshots
 
-<p align="middle">
-    <img src="https://github.com/outofink/ml-vue/raw/master/screenshots/home.jpg" width=300 style="padding: 1em">
-    <img src="https://github.com/outofink/ml-vue/raw/master/screenshots/main.jpg" width=300 style="padding: 1em">
+<p align="middle" style="padding:4em">
+    <img src="https://github.com/outofink/ml-vue/raw/master/screenshots/home.jpg" width=300 />
+    <img src="https://github.com/outofink/ml-vue/raw/master/screenshots/main.jpg" width=300 />
 </p>
 
 ## Usage
