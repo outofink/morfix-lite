@@ -11,8 +11,8 @@ Powered by [Vue.js](https://vuejs.org/) and [Vuetify](https://vuetifyjs.com/en/)
 
 ## Screenshots
 
-<img src="https://github.com/outofink/ml-vue/raw/screenshots/home.jpg" width=300> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://github.com/outofink/ml-vue/raw/screenshots/main.jpg" width=300>
+<img src="https://github.com/outofink/ml-vue/raw/master/screenshots/home.jpg" width=300> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<img src="https://github.com/outofink/ml-vue/raw/master/screenshots/main.jpg" width=300>
 
 ## Status
 
