@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/outofink/ml-vue/raw/master/public/img/icons/android-chrome-192x192.png">
+<img src="https://github.com/outofink/ml-vue/raw/master/public/img/icons/android-chrome-512x512.png" width=192>
 </p>
 
 <h1 align="center">Morflix Lite</h1>
