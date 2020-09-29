@@ -1,0 +1,78 @@
+{
+  "name": "ml-vue",
+  "version": "0.3.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "start": "node server/index.js"
+  },
+  "dependencies": {
+    "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
+    "connect-history-api-fallback": "^1.6.0",
+    "core-js": "^3.6.5",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "register-service-worker": "^1.7.1",
+    "vue": "^2.6.12",
+    "vue-router": "^3.4.5",
+    "vuetify": "^2.3.6"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.6",
+    "@vue/cli-plugin-eslint": "~4.5.6",
+    "@vue/cli-plugin-pwa": "^4.5.6",
+    "@vue/cli-plugin-router": "^4.5.6",
+    "@vue/cli-service": "~4.5.6",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.10.0",
+    "eslint-config-prettier": "^6.12.0",
+    "eslint-loader": "^4.0.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-vue": "^6.2.2",
+    "prettier": "^2.1.2",
+    "sass": "^1.26.11",
+    "sass-loader": "^10.0.2",
+    "vue-cli-plugin-vuetify": "^2.0.7",
+    "vue-template-compiler": "^2.6.12",
+    "vuetify-loader": "^1.6.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended",
+      "prettier/vue",
+      "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {
+      "vue/html-end-tags": "warn",
+      "vue/html-indent": "warn",
+      "vue/html-self-closing": "warn",
+      "vue/no-multi-spaces": "warn",
+      "vue/v-bind-style": "warn",
+      "vue/v-on-style": "warn",
+      "vue/attributes-order": "warn",
+      "vue/no-confusing-v-for-v-if": "warn",
+      "vue/no-v-html": "warn",
+      "vue/order-in-components": "warn",
+      "vue/this-in-template": "warn",
+      "vue/eqeqeq": "warn",
+      "vue/no-irregular-whitespace": "warn",
+      "vue/script-indent": "warn"
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}

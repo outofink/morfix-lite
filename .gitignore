@@ -1,2 +1,4 @@
 node_modules
-public/service-worker.js
+/dist
+.vscode
+todo.txt
