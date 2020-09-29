@@ -3,7 +3,7 @@
     <v-btn disabled aria-label="icon" icon class="d-flex d-sm-none mx-auto"><v-icon x-large>$morfix</v-icon></v-btn>
     <v-toolbar-title class="d-none d-sm-flex">Morfix Lite</v-toolbar-title>
     <v-spacer />
-    <v-form style="margin-left: 15px;" :style="$vuetify.breakpoint.xs ? { width: '100%' } : {}" @submit="DoSearch">
+    <v-form style="margin-left: 15px" :style="$vuetify.breakpoint.xs ? { width: '100%' } : {}" @submit="DoSearch">
       <v-text-field
         id="search"
         v-model="search"
