@@ -9,22 +9,21 @@
 
 Powered by [Vue.js](https://vuejs.org/) and [Vuetify](https://vuetifyjs.com/en/).
 
+## Brief
+
+[Morfix](http://www.morfix.co.il/) is an online dictionary service that provides an in-depth translation from Hebrew to English, and vice versa. The service's app has a particularly long loading time, and a complicated and conviluted interface.
+
+[Morfix Lite](https://morfix-lite.herokuapp.com) aims to provide the same service, but with a completely new interface, which provides a search bar and that's it.
+
 ## Screenshots
 
 <img src="https://github.com/outofink/ml-vue/raw/master/screenshots/home.jpg" width=300> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="https://github.com/outofink/ml-vue/raw/master/screenshots/main.jpg" width=300>
 
-## Status
-
-Probably up?
-
 ## Usage
 
 Go to https://morfix-lite.herokuapp.com and have a go.
 
-## Bugs and Issues
-
-None that I know of.
 
 ## Features (as compared to the official Morfix app)
 
