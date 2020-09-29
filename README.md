@@ -2,8 +2,7 @@
 <img src="https://github.com/outofink/ml-vue/raw/master/public/img/icons/android-chrome-512x512.png" width=192>
 </p>
 
-<h1 align="center">Morflix Lite</h1>
-
+<h1 align="center">Morlix Lite</h1>
 
 [Morfix Lite](https://morfix-lite.herokuapp.com) is an extremely lightweight front-end alternative for [Morfix](http://www.morfix.co.il/) using their API.
 
