@@ -9,6 +9,14 @@
       </div>
     </v-scroll-x-transition>
     <v-scroll-x-transition>
+      <Suggestions
+        v-if="show && cards.data.length === 0 && cards.suggestions && cards.suggestions.length !== 0"
+        :show="show"
+        :suggestions="cards.suggestions"
+        :fromEnglish="cards.metadata.fromEnglish"
+      />
+    </v-scroll-x-transition>
+    <v-scroll-x-transition>
       <v-card v-if="show && cards.data.length === 0" outlined max-width="450" class="mx-auto my-2">
         <v-card-title class="justify-center font-italic text-h5 text--secondary">no results found</v-card-title>
       </v-card>
@@ -18,10 +26,13 @@
 
 <script>
 import Card from './Card'
+import Suggestions from './Suggestions'
+
 export default {
   name: 'Main',
   components: {
     Card,
+    Suggestions,
   },
   props: ['cards', 'show', 'skeleton'],
 }

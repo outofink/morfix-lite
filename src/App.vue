@@ -75,7 +75,7 @@ export default {
               translation: translation,
             })
           }
-          this.cards = { metadata: { fromEnglish }, data: results }
+          this.cards = { metadata: { fromEnglish }, data: results, suggestions: data.CorrectionList }
         })
         .catch((err) => console.log(err))
         .finally(() => {

@@ -41,10 +41,10 @@ Go to https://morfix-lite.herokuapp.com and have a go.
 ### General features
 
 - [x] Search and Translation
+- [x] Search suggestions  ("Did you mean: ")
 - [ ] English synonyms, examples and alternate forms
 - [ ] Saving words
 - [ ] Sharing words
-- [ ] Suggestive search
 - [ ] Audio playback
 
 ### Features that will never be implemented
