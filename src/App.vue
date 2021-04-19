@@ -53,8 +53,9 @@ export default {
 
       const sanitizedQuery = query.replace(/[`~!@#$%^&*()_|+=?;:'",.<>{}[\]\\/]/gi, '')
 
+      const path = process.env.NODE_ENV === 'development' ? 'http://localhost:5000/search' : '/search'
       axios
-        .post('/search', { word: sanitizedQuery })
+        .post(path, { word: sanitizedQuery })
         .then((res) => {
           let data = res.data
           let fromEnglish = data.TranslationTypeValue - 1
