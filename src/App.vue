@@ -12,7 +12,6 @@
 <script>
 import Main from './components/Main'
 import TopBar from './components/TopBar'
-import axios from 'axios'
 
 export default {
   name: 'App',
@@ -54,10 +53,17 @@ export default {
       const sanitizedQuery = query.replace(/[`~!@#$%^&*()_|+=?;:'",.<>{}[\]\\/]/gi, '')
 
       const path = process.env.NODE_ENV === 'development' ? 'http://localhost:5000/search' : '/search'
-      axios
-        .post(path, { word: sanitizedQuery })
-        .then((res) => {
-          let data = res.data
+
+      fetch(path, {
+        method: 'POST',
+        timeout: 4000,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ word: sanitizedQuery }),
+      })
+        .then((response) => response.json())
+        .then((data) => {
           let fromEnglish = data.TranslationTypeValue - 1
           let results = []
           for (let word of data.Words) {
