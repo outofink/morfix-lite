@@ -83,12 +83,18 @@ export default {
             })
           }
           this.cards = { metadata: { fromEnglish }, data: results, suggestions: data.CorrectionList }
-        })
-        .catch((err) => console.log(err))
-        .finally(() => {
           this.skeleton = false
+        })
+        .catch((err) => {
+          console.error(err)
+          this.cards = { metadata: { fromEnglish: 0 }, data: [], suggestions: [] }
+        })
+        .finally(() => {
           document.title = 'Morfix Lite - ' + this.$route.params.word
-          setTimeout(() => (this.show = true), 300)
+          setTimeout(() => {
+            this.skeleton = false
+            this.show = true
+          }, 300)
         })
     },
   },
